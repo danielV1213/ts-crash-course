@@ -1,6 +1,7 @@
-let age: number = 20;
+let testDocument = 123456789;
 
-if (age < 50)
-    age += 10;
+function printDocument(document: number) {
+  console.log(document);
+};
 
-console.log(age);
+printDocument(testDocument);

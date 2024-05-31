@@ -1,6 +1,8 @@
 "use strict";
-let age = 20;
-if (age < 50)
-    age += 10;
-console.log(age);
+let testDocument = 123456789;
+function printDocument(document) {
+    console.log(document);
+}
+;
+printDocument(testDocument);
 //# sourceMappingURL=index.js.map
