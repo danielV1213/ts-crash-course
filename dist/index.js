@@ -1,8 +1,5 @@
 "use strict";
-let testDocument = 123456789;
-function printDocument(document) {
-    console.log(document);
-}
-;
-printDocument(testDocument);
+let user = [1, 'Daniel'];
+user[0].toFixed();
+console.log(user[1].includes('o'));
 //# sourceMappingURL=index.js.map

@@ -1,17 +1,10 @@
-let numbers: number[] = [1, 2, 3];
+// Tuples. It's a typed array with a pre-defined length and types for each index.
+let user: [number, string] = [1, 'Daniel'];
 
-// What if the array was empty
-let newArray = [];
+// It also has code completion, so if for example, we access an element with type "number", then we will obtain the methods for a Number object.
+user[0].toFixed();
+console.log(user[1].includes('o'));
+// For some reason, tuples in TS allow the user to access every single array method, including the "push()" method, without throwing any errors from the compiler; which means that you could push elements that surpass the pre-defined length to the array. This is something to take into consideration when working with tuples.
+// user.push(1);
 
-// You could append any type of variables to it because it is not expecting a particular type.
-newArray[0] = "1";
-newArray[1] = 2;
-
-// But if the type of the expected elements is specified, then the elements to append will have to be of the that type.
-let anotherArray: number[] = [];
-anotherArray[0] = 1;
-// This assignment will throw an error. It is always recommended to explicitly set an empty array's type.
-// anotherArray[1] = "2";
-
-// Code completion. The TS compiler also completes the methods for the expected type of the array's elements.
-// anotherArray.forEach(n => n.);
+// It is also recommended to use tuples for storing 2 elements tops, because the more elements you add, the more confusing the structure gets.
